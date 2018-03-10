@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* =============================================================================
+  RESETS
+============================================================================= */
+
+html,
+body,
+div,
+h1,
+p,
+a,
+video {
+  margin: 0;
+  padding: 0;
+}
+
+
+html, body {
+	height: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	background-color: #272932;
+}
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
+
+.parallax-container {
+	background-attachment: fixed;
+	background-position: center;
+	position: relative;
+	background-size: auto 100%;
+	overflow: hidden;
+}
+
+#lead {
+	height: 5834px;
+	overflow: hidden;
+	background: url(warren-wong-346736.jpg);
+	background-position: top;
+	width: 100%;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+.overlay {
+	position: fixed;
+	/*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAIklEQVQYV2NkQID/DAwMjDAunMHAwEC6BMgUuC5ko4iTAAC7mgYHLwjlCQAAAABJRU5ErkJggg==); */
+	width: 100%;
+	background-attachment: scroll;
+	height: 100vh;
+	z-index: 99;
+}
+
+#lead-overlay-01 {
+	opacity: .6;
+	top: 0;
+	left: 0;
+	background: url(stardust.png);
+	display: none;
+}
+
+#lead-overlay-02 {
+	opacity: .6;
+	top: 0;
+	left: 0;
+	background: url(stardust.png);
+}
+#lead-overlay-03 {
+	opacity: .6;
+	top: 2px;
+	left: 2px;
+}
+#lead-overlay-04 {
+	opacity: .6;
+	top: 3px;
+	left: 3px;
+}
+#lead-overlay-05 {
+	opacity: .6;
+	top: 4px;
+	left: 4px;
+}
+
+.knockout {
+	  
+  /* if we can clip, do it 
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;*/
+	
+  /* what will show through the text
+      ~ or ~
+     what will be the background of that element 
+  background: url(warren-wong-346736.jpg);*/
+
+  /* fallback text color
+      ~ or ~
+     the actual color of text, so it better work on the background 
+  color: red;*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20vw;
+    display: inline-block;
+    text-align: center;
+    height: 100vh;
+    font-weight: 700;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    background-color: rgba(255,255,255,1);
+    box-sizing: border-box;
+    padding: 0 1rem 1rem;
+    mix-blend-mode: overlay;
+    line-height: 100vh;
+    color: #ED2E35;
+    line-height: 100vh;
+	z-index: 98;
+}
+
+@media screen and (max-width : 768px) {
+	.knockout {
+		line-height: 70vw !important;
+		font-size: 45vw !important;
+		padding-top: 5vh !important;
+	}
+}
+
+.knockoutcontainer {
+	transform: skewY(-3deg);
+}
+
+#scroll {
+    position: absolute;
+    color: #000;
+    font-size: 2em;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Oswald', sans-serif;
+    opacity: .7;
+}
+
+.shape {
+    mix-blend-mode: difference;
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+}
+.shape-container {
+    mix-blend-mode: difference;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	z-index: 99;
+}
+#shape-01 {
+    background-color: #f00;
+    top: 1500px;
+}
+
+#shape-02 {
+	background-color: #ff0;
+	top: 1750px;
+}
+
+#shape-03 {
+	background-color: #0f0;
+	top: 2000px;
+}
+#shape-04 {
+	background-color: #f0f;
+	top: 2500px;
+}
+#shape-05 {
+	background-color: #0f0;
+	top: 2750px;
+}
+#shape-06 {
+	background-color: #f00;
+	top: 3000px;
+}
+#shape-last {
+    mix-blend-mode: normal;
+    position: fixed;
+    display: block;
+    height: 50vh;
+    width: 100%;
+    left: 0;
+    transform: skewY(-3deg);
+    top: 25%;
+    background-color: #999;
+    z-index: 97;
+}
+#shape-last-2 {
+    mix-blend-mode: normal;
+    position: fixed;
+    display: block;
+    height: 50vh;
+    width: 100%;
+    left: 0;
+    transform: skewY(3deg);
+    top: 25%;
+    background-color: #000;
+    z-index: 96;
+	border-top: 20px solid #999;
+    border-bottom: 20px solid #999;
+    box-shadow: 0px 0px 50px #000;
+}
+.credits-container {
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    display: block;
+    z-index: 99;
+    border-top: solid #222 2px;
+    border-bottom: solid #222 2px;
+}
+.credits {
+    color: #222;
+    font-family: "Courier New", "Lucida Console", monospace, serif;
+    font-size: 1.5em;
+    padding: 10px;
+    font-weight: 300;
+    margin: 0 0 0 10px;
+}
+.credit , a {
+	color: #222;
+	text-decoration: none;
+}
+
+.credit , a:hover {
+	color: 	#ed872e;
+}
